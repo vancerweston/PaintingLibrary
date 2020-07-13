@@ -6,8 +6,127 @@
         <meta http-equiv='X-UA-Compatible' contents='ie=edge'>
         <title>Painting Math</title>
     </head>
-    <body>
-        <h1>Hi</h1>
+    <body style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center; margin: 0 20% 10% 20%;">
+        <h1>Welcome to Painting Mathematics Library</h1>
+        <br/>
+        <h2>Instructions</h2>
+        <br/>
+        <p>Currently companies that stripe new paved or seal coated parking lots
+            do all of their estimates by hand. This library is made to do calculations
+            for anyone building an application to create estimates for line painting. 
+            The only measurements that the estimator needs is the length of the lot, and 
+            the length of the line to the end cap. When these two numbers are entered into
+            "paintMath" formulas it will calculate all the measurements for different types 
+            of lot lines.
+        </p>
+        <br/>
+        <h2>PaintMath Formulas</h2>
+        <h5>Key:</h5>
+        <p>LotLength: The length of the lot where the stalls are going to be painted.</p>
+        <p>EndCapLength: The length of the line from one end to the other.</p>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>numOfStraitStallLines</legend>
+            <li>Enter in the "lotLength" as a parameter</li>
+            <li>paintMath.numOfStraitStallLines(lotLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>numOfDiagonalStallLines</legend>
+            <li>Enter in the "lotLength" as a parameter</li>
+            <li>paintMath.numOfDiagonalStallLines(lotLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>numOfParallelStallLines</legend>
+            <li>Enter in the "lotLength" as a parameter</li>
+            <li>paintMath.numOfParallelStallLines(lotLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset><legend>numOfDoubleStallLines</legend>
+            <li>Enter in the "lotLength" as a parameter</li>
+            <li>paintMath.numOfDoubleStallLines(lotLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>numOfStraitStalls</legend>
+            <li>Enter in the "lotLength" as a parameter</li>
+            <li>paintMath.numOfStraitStalls(lotLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset><legend>numOfDiagonalStalls</legend>
+            <li>Enter in the "lotLength" as a parameter</li>
+            <li>paintMath.numOfDiagonalStalls(lotLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>numOfParallelStalls</legend>
+            <li>Enter in the "lotLength" as a parameter</li>
+            <li>paintMath.numOfParallelStalls(lotLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>numOfDoubleStalls</legend>
+            <li>Enter in the "lotLength" as a parameter</li>
+            <li>paintMath.numOfDoubleStalls(lotLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>totalPaintUsedStrait</legend>
+            <li>Enter the "lotLength" and "endCapLength" as parameters</li>
+            <li>paintMath.totalPaintUsedStrait(lotLength, endCapLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>totalPaintUsedDiagonal</legend>
+            <li>Enter the "lotLength" and "endCapLength" as parameters</li>
+            <li>paintMath.totalPaintUsedDiagonal(lotLength, endCapLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>totalPaintUsedParallel</legend>
+            <li>Enter the "lotLength" and "endCapLength" as parameters</li>
+            <li>paintMath.totalPaintUsedParallel(lotLength, endCapLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>totalPaintUsedDouble</legend>
+            <li>Enter the "lotLength" and "endCapLength" as parameters</li>
+            <li>paintMath.totalPaintUsedDouble(lotLength, endCapLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>timeToPaint</legend>
+            <li>Enter the "lotLength" and "endCapLength" as parameters</li>
+            <li>paintMath.timeToPaint(lotLength, endCapLength)</li>
+        </fieldset>
+        <br/>
+        <fieldset style="padding: 15px;"><legend>crewSize</legend>
+            <li>Enter the "lotLength" and "endCapLength" as parameters</li>
+            <li>paintMath.crewSize(lotLength, endCapLength)</li>
+        </fieldset>
+        <br/>
+        <h2>Examples of Using the Formulas</h2>
+        <br/>
+        <fieldset style="font-family: sans-serif; padding: 15px;"><legend>JavaScript</legend>
+            <p style="color: darkgrey;">//Get the lot length and end cap length from a formula entered in on the front end</p>
+            <p style="color: darkgrey;">//Attach PaintMath library to your JavaScript file</p>
+            <br/>
+            <p>import { paintMath } from "./paintMathFileLocation";</p>
+            <br/>
+            <p>paintMath.numOfStraitStallLines(lotLength);</p>
+            <p style="color: darkgrey;">//Formulates mathematics to fine lines</p>
+            <br/>
+            <p style="color: darkgrey;">//You can console.log the whole line or save it in a variable</p>
+            <p>let paint = paintMath.totalPaintUsedStrait(lotLength, endCapLength);</p>
+            <p>console.log(paint);</p>
+            <br/>
+            <p style="color: darkgrey;">//If every formula is printed to the console with a lot length of 1350 and end cap length of 18 this 
+                is the output:</p>
+            <ul style="color: darkgrey; list-style-type: none; text-align: left; margin-left: 25%;">
+                <li>>>Strait Stall Lines: 149</li>
+                <li>>>Diagonal Stall Lines: 121</li>
+                <li>>>Parallel Stall Lines: 53</li>
+                <li>>>Number of strait Stalls: 150</li>
+                <li>>>Number of Diagonal Stalls: 122</li>
+                <li>>>Number of Parallel Stalls: 54</li>
+                <li>>>Total Paint in gallons for Strait Lines: 6.705</li>
+                <li>>>Total Paint in gallons for Diagonal Lines: 8.117</li>
+                <li>>>Total Paint in gallons for Parallel Lines: 2.385</li>
+                <li>>>Estimate of Time to Paint Lines in hours: 2.03</li>
+                <li>>>Estimate of Crew Members to send to Job: 2</li>
+            </ul>
+        </fieldset>
+
         <script src='../dist/main.js'></script>
     </body>
 </html>

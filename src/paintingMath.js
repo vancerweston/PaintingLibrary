@@ -9,6 +9,9 @@ export let paintMath = (() => {
         numOfParallelStallLines: (lotLength) => {
             return Math.floor(lotLength / 25) - 1;
         },
+        numOfDoubleStallLines: (lotLength) => {
+            return Math.floor(lotLength / 9) -1;
+        },
         numOfStraitStalls: (lotLength) => {
             let result = Math.floor(paintMath.numOfStraitStallLines(lotLength)) + 1;
             return result;
@@ -19,6 +22,10 @@ export let paintMath = (() => {
         },
         numOfParallelStalls: (lotLength) => {
             let result = Math.floor(paintMath.numOfParallelStallLines(lotLength)) + 1;
+            return result;
+        },
+        numOfDoubleStalls: (lotLength) => {
+            let result = Math.floor(paintMath.numOfDoubleStallLines(lotLength)) + 1;
             return result;
         },
         totalPaintUsedStrait: (endCapLength, lotLength) => {
@@ -49,6 +56,15 @@ export let paintMath = (() => {
 
             let parallel = (time * amountParLines) * paint;
             return Number(parallel.toFixed(3));
+        },
+        totalPaintUsedDouble: (endCapLength, lotLength) => {
+            let paint = 0.01;
+            let time = (endCapLength) /4;
+
+            let amountDoubLines = paintMath.numOfDiagonalStallLines(lotLength);
+            
+            let double = (time * amountDoubLines) * paint;
+            return Number(double.toFixed(3));
         },
         timeToPaint: (endCapLength, lotLength) => {
             let time = endCapLength / 4;
